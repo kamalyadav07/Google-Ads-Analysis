@@ -1,0 +1,30 @@
+{
+  "name": "google-ads-landing-page-intelligence",
+  "version": "1.0.0",
+  "description": "Centralized live marketing analytics, visitor behavior, form friction, and Bitrix24 conversion intelligence platform.",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k -p \"[{name}]\" -n \"SERVER,CLIENT\" -c \"cyan.bold,green.bold\" \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "build": "npm --prefix server run build && npm --prefix client run build",
+    "test": "npm --prefix server test",
+    "migrate": "npm --prefix server run db:migrate",
+    "seed": "npm --prefix server run db:seed"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "google-ads",
+    "analytics",
+    "landing-pages",
+    "conversion-funnel",
+    "bitrix24",
+    "visitor-tracking",
+    "marketing-intelligence"
+  ],
+  "author": "Marketing & Development Engineering",
+  "license": "ISC"
+}

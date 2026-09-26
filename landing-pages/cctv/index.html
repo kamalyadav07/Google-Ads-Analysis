@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise CCTV & Video Surveillance Solutions | Commercial Security</title>
+  <meta name="description" content="AI-powered commercial CCTV installation, cloud video surveillance, and ANPR access control across Delhi NCR, Mumbai, and Bengaluru.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Pre-embedded Intelligence Tracking SDK -->
+  <script src="http://localhost:5000/sdk/tracker.js" data-service="cctv" data-endpoint="http://localhost:5000/api/v1/collect" async></script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased">
+  
+  <!-- Top Communication Bar -->
+  <div class="bg-slate-900 border-b border-slate-800 text-xs py-2 px-6">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-4 text-slate-400">
+        <span>📍 Delhi NCR | Mumbai | Bengaluru</span>
+        <span>•</span>
+        <span>⚡ 4-Hour Onsite Emergency SLA</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:+919811223344" class="text-sky-400 font-semibold hover:underline" data-cta="topbar-call">📞 +91 9811 22 3344</a>
+        <a href="https://wa.me/919811223344?text=Hi%20I%20need%20a%20commercial%20CCTV%20quote" target="_blank" class="text-emerald-400 font-semibold hover:underline" data-cta="topbar-whatsapp">💬 WhatsApp Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="border-b border-slate-800/80 sticky top-0 bg-slate-950/90 backdrop-blur z-20 px-6 py-4">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <div class="text-lg font-bold text-white tracking-tight flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full bg-sky-500"></span>
+        SECURE<span class="text-sky-400">VISION</span> AI
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-slate-400">
+        <a href="#features" class="hover:text-white transition">Features</a>
+        <a href="#specifications" class="hover:text-white transition">Hardware Specs</a>
+        <a href="#quote" class="hover:text-white transition">Pricing</a>
+      </nav>
+      <a href="#quote" class="bg-sky-600 hover:bg-sky-500 text-white text-xs font-bold px-4 py-2 rounded-lg transition" data-cta="header-quote">
+        Get Instant Quote
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="py-16 px-6 relative overflow-hidden" id="hero">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/10 text-sky-400 border border-sky-500/20 inline-block">
+          Commercial & Enterprise Grade
+        </span>
+        <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+          Next-Gen AI CCTV & Cloud Surveillance Systems
+        </h1>
+        <p class="text-base text-slate-300 leading-relaxed max-w-xl">
+          Complete turnkey IP surveillance with 4K optical clarity, automated license plate recognition (ANPR), and central cloud monitoring. Designed for factories, warehouses, corporate offices, and data centers.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <a href="#quote" class="bg-sky-600 hover:bg-sky-500 text-white font-bold px-6 py-3 rounded-xl shadow-lg shadow-sky-600/25 transition text-sm" data-cta="hero-quote">
+            Request Site Survey & Quote ──►
+          </a>
+          <a href="https://wa.me/919811223344" target="_blank" class="bg-emerald-600/10 border border-emerald-500/30 text-emerald-400 font-semibold px-5 py-3 rounded-xl hover:bg-emerald-600/20 transition text-sm flex items-center gap-2" data-cta="hero-whatsapp">
+            💬 Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Quote Form -->
+      <div class="lg:col-span-5" id="quote">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-2xl">
+          <h2 class="text-lg font-bold text-white mb-1">Get an Instant Commercial Estimate</h2>
+          <p class="text-xs text-slate-400 mb-5">Receive a customized hardware BOM & pricing proposal within 60 minutes.</p>
+
+          <form id="cctv-quote-form" class="space-y-4">
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1">Your Full Name *</label>
+              <input type="text" name="full_name" required placeholder="e.g. Vikram Mehra" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-sky-500">
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-medium text-slate-300 mb-1">Mobile Phone *</label>
+                <input type="tel" name="phone" required placeholder="+91 98..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-sky-500">
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-slate-300 mb-1">Company Name *</label>
+                <input type="text" name="company_name" required placeholder="Organization" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-sky-500">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1">Surveillance Scope *</label>
+              <select name="scope" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-sky-500">
+                <option value="4-16">4 - 16 IP Cameras (Small Office)</option>
+                <option value="16-64">16 - 64 IP Cameras (Commercial Complex)</option>
+                <option value="64+">64+ Cameras (Factory / Campus / Multi-site)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1">Requirement Details *</label>
+              <textarea name="requirement" rows="3" required placeholder="Describe location, storage days, and specific requirements..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-sky-500"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-sky-600 hover:bg-sky-500 text-white font-bold py-3 rounded-xl transition text-sm shadow-md" data-cta="submit-quote">
+              Submit Inquiry to Engineers
+            </button>
+          </form>
+          <div id="form-success" class="hidden mt-4 p-3 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 rounded-lg text-xs font-semibold text-center">
+            ✓ Inquiry submitted successfully! Our lead engineer will contact you shortly.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 25% Scroll Milestone: Features -->
+  <section class="py-16 px-6 border-t border-slate-800/80 bg-slate-900/30" id="features">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-xl mx-auto mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold text-white">Engineered for Zero Downtime</h2>
+        <p class="text-xs text-slate-400 mt-2">Enterprise-grade NVR storage with redundant failover and cloud backup.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800">
+          <h3 class="font-bold text-white text-base mb-2">4K Optical Resolution</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">Crisp facial recognition and perimeter detection up to 80 meters day and night with smart IR illumination.</p>
+        </div>
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800">
+          <h3 class="font-bold text-white text-base mb-2">Edge AI Analytics</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">Automated vehicle number plate recognition (ANPR), intrusion tripwire alerts, and human heatmaps.</p>
+        </div>
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800">
+          <h3 class="font-bold text-white text-base mb-2">Centralized Monitoring</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">Multi-site command matrix with real-time health telemetry and instant mobile alert push notifications.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 50% Scroll Milestone: Hardware Specs -->
+  <section class="py-16 px-6 border-t border-slate-800/80" id="specifications">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-xl mx-auto mb-12">
+        <h2 class="text-2xl md:text-3xl font-bold text-white">Tier-1 Hardware Standards</h2>
+        <p class="text-xs text-slate-400 mt-2">Compatible with Hikvision, Dahua, Axis, Honeywell, and Hanwha Vision.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center font-mono">
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <div class="text-2xl font-bold text-sky-400 mb-1">99.98%</div>
+          <div class="text-xs text-slate-400 font-sans">Hardware Uptime</div>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <div class="text-2xl font-bold text-sky-400 mb-1">90 Days</div>
+          <div class="text-xs text-slate-400 font-sans">Storage Retention</div>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <div class="text-2xl font-bold text-sky-400 mb-1">H.265+</div>
+          <div class="text-xs text-slate-400 font-sans">Bandwidth Saving</div>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <div class="text-2xl font-bold text-sky-400 mb-1">IP67</div>
+          <div class="text-xs text-slate-400 font-sans">Weatherproof Rating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 75% Scroll Milestone: Client Trust -->
+  <section class="py-16 px-6 border-t border-slate-800/80 bg-slate-900/30">
+    <div class="max-w-6xl mx-auto text-center space-y-6">
+      <h2 class="text-2xl font-bold text-white">Protecting 350+ Facilities Across India</h2>
+      <p class="text-xs text-slate-400 max-w-lg mx-auto">From logistics hubs in Gurugram to financial server rooms in BKC Mumbai, our surveillance infrastructure is trusted by leading enterprise brands.</p>
+      <div class="pt-4">
+        <a href="#quote" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold px-6 py-3 rounded-xl transition text-sm inline-block" data-cta="middle-cta">
+          Book Free Engineering Survey
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 100% Milestone: Footer -->
+  <footer class="py-8 px-6 border-t border-slate-800 text-xs text-slate-500 text-center">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>&copy; 2026 Commercial Security Solutions. All rights reserved.</div>
+      <div class="flex items-center gap-4">
+        <a href="tel:+919811223344" class="hover:text-slate-300" data-cta="footer-phone">Toll Free: 1800-419-3344</a>
+        <a href="#quote" class="hover:text-slate-300" data-cta="footer-quote">Request Callback</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Form submission listener
+    document.getElementById('cctv-quote-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('form-success').classList.remove('hidden');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
