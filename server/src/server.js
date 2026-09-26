@@ -69,6 +69,25 @@ cron.schedule('0 * * * *', async () => {
   }
 });
 
+// Automatic Keep-Alive Self-Pinger for Render Free-Tier (Every 12 minutes)
+const externalUrl = process.env.RENDER_EXTERNAL_URL || process.env.PUBLIC_URL;
+if (externalUrl) {
+  console.log(`[Keep-Alive] Initializing self-pinger for: ${externalUrl}`);
+  cron.schedule('*/12 * * * *', () => {
+    try {
+      const pingUrl = `${externalUrl.replace(/\/+$/, '')}/api/health`;
+      const client = pingUrl.startsWith('https') ? require('https') : require('http');
+      client.get(pingUrl, (res) => {
+        console.log(`[Keep-Alive] Pinged ${pingUrl} (Status: ${res.statusCode})`);
+      }).on('error', (err) => {
+        console.warn(`[Keep-Alive Warning] Ping failed: ${err.message}`);
+      });
+    } catch (err) {
+      console.warn('[Keep-Alive Warning]', err.message);
+    }
+  });
+}
+
 // 6. Bootstrap Server
 async function startServer() {
   try {
