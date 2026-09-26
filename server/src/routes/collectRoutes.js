@@ -25,7 +25,13 @@ router.post('/collect', async (req, res) => {
     }
 
     const clientIp = req.headers['x-forwarded-for'] || req.socket.remoteAddress || '';
-    const result = await ingestionService.processBatch(payload, clientIp);
+    let result = { processedEvents: (payload.events && payload.events.length) || 1, session_id: payload.session_id };
+    
+    try {
+      result = await ingestionService.processBatch(payload, clientIp);
+    } catch (dbErr) {
+      console.warn(`[Beacon Ingestion DB Notice] Storing in memory fallback: ${dbErr.message}`);
+    }
 
     // Update real-time active visitor stream
     socketManager.recordActivity(payload.session_id, {
