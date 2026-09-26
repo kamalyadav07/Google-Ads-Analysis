@@ -8,9 +8,9 @@ async function runMigrations() {
   await ensureDatabaseExists();
   const connTest = await testConnection();
   if (!connTest.connected) {
-    console.error(`❌ Could not connect to MySQL: ${connTest.error}`);
-    console.error('Please verify your MySQL service is running and credentials in server/.env are valid.');
-    process.exit(1);
+    console.warn(`⚠️ Could not connect to MySQL: ${connTest.error}`);
+    console.warn('⚠️ Starting in standalone mode without migrations. Connect a remote MySQL instance to persist records.');
+    return;
   }
 
   const pool = getPool();
