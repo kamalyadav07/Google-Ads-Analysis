@@ -265,7 +265,7 @@
 
     if (navigator.sendBeacon) {
       try {
-        var blob = new Blob([payloadStr], { type: 'application/json' });
+        var blob = new Blob([payloadStr], { type: 'text/plain;charset=UTF-8' });
         sent = navigator.sendBeacon(config.endpoint, blob);
       } catch (e) {
         sent = false;
@@ -277,7 +277,8 @@
         fetch(config.endpoint, {
           method: 'POST',
           body: payloadStr,
-          headers: { 'Content-Type': 'application/json' },
+          mode: 'cors',
+          headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
           keepalive: true
         }).catch(function () {
           // Re-queue on network error

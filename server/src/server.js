@@ -25,8 +25,10 @@ const CLIENT_URL = process.env.CLIENT_URL || 'http://localhost:5173';
 // 1. Global Middleware
 app.use(cors({
   origin: '*', // Allow landing pages from any domain to send beacons
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'Origin']
 }));
+app.options('*', cors());
 
 // 2. Serve Static Tracking SDK
 const localTrackerPath = path.join(__dirname, '../public/tracker.js');

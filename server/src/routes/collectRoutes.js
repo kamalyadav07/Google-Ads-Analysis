@@ -3,6 +3,17 @@ const router = express.Router();
 const ingestionService = require('../services/ingestionService');
 const socketManager = require('../sockets/socketManager');
 
+// Explicit CORS for Cross-Domain Beacon Telemetry
+router.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Origin, Accept, X-Requested-With');
+  if (req.method === 'OPTIONS') {
+    return res.status(204).end();
+  }
+  next();
+});
+
 // Parse text/plain from navigator.sendBeacon
 router.use(express.text({ type: 'text/plain', limit: '1mb' }));
 router.use(express.json({ limit: '1mb' }));
