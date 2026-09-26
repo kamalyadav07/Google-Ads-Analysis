@@ -16,7 +16,7 @@ export default function ServiceSelector() {
   const { selectedService, setSelectedService, liveStats } = useAnalytics();
 
   return (
-    <div className="bg-[#111827] border-b border-[#1F293D] px-6 py-2">
+    <div className="bg-slate-100/70 border-b border-slate-200/90 px-6 py-2 font-sans">
       <div className="max-w-7xl mx-auto flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
         {SERVICES.map((s) => {
           const Icon = s.icon;
@@ -29,17 +29,17 @@ export default function ServiceSelector() {
             <button
               key={s.slug}
               onClick={() => setSelectedService(s.slug)}
-              className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all duration-150 ${
+              className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all duration-150 ${
                 isActive
-                  ? 'bg-sky-500/10 text-sky-400 border border-sky-500/30 shadow-sm'
-                  : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 border border-transparent'
+                  ? 'bg-white text-blue-700 border border-slate-200/90 shadow-sm'
+                  : 'text-slate-600 hover:text-slate-900 hover:bg-white/60 border border-transparent'
               }`}
             >
-              <Icon className="w-3.5 h-3.5" />
+              <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-blue-600' : 'text-slate-400'}`} />
               <span>{s.label}</span>
               {liveCount > 0 && (
                 <span className={`px-1.5 py-0.2 rounded-full text-[10px] font-bold ${
-                  isActive ? 'bg-sky-400/20 text-sky-300' : 'bg-slate-800 text-slate-400'
+                  isActive ? 'bg-blue-50 text-blue-700 border border-blue-200/60' : 'bg-slate-200/80 text-slate-600'
                 }`}>
                   {liveCount}
                 </span>

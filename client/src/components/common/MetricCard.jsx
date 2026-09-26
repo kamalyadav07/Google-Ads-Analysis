@@ -10,35 +10,35 @@ export default function MetricCard({
   glowColor = 'sky',
   alert = false
 }) {
-  const glowClasses = {
-    sky: 'border-sky-500/20 text-sky-400 bg-sky-500/10',
-    emerald: 'border-emerald-500/20 text-emerald-400 bg-emerald-500/10',
-    amber: 'border-amber-500/20 text-amber-400 bg-amber-500/10',
-    indigo: 'border-indigo-500/20 text-indigo-400 bg-indigo-500/10',
-    rose: 'border-rose-500/20 text-rose-400 bg-rose-500/10'
+  const iconClasses = {
+    sky: 'border-blue-100 text-blue-600 bg-blue-50',
+    emerald: 'border-emerald-100 text-emerald-600 bg-emerald-50',
+    amber: 'border-amber-100 text-amber-600 bg-amber-50',
+    indigo: 'border-indigo-100 text-indigo-600 bg-indigo-50',
+    rose: 'border-rose-100 text-rose-600 bg-rose-50'
   };
 
   return (
-    <div className={`card-surface p-4.5 relative overflow-hidden ${
-      alert ? 'border-amber-500/50 shadow-glow-amber' : ''
+    <div className={`card-surface p-5 relative overflow-hidden bg-white ${
+      alert ? 'border-amber-300 ring-1 ring-amber-300/40 bg-amber-50/10' : ''
     }`}>
       <div className="flex items-start justify-between">
         <div>
-          <p className="text-xs font-medium text-slate-400 uppercase tracking-wider">{title}</p>
-          <h3 className="text-2xl font-bold tracking-tight text-white mt-1">{value}</h3>
+          <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">{title}</p>
+          <h3 className="text-2xl font-bold tracking-tight text-slate-900 mt-1 font-tabular">{value}</h3>
         </div>
         {Icon && (
-          <div className={`p-2.5 rounded-xl border ${glowClasses[glowColor] || glowClasses.sky}`}>
+          <div className={`p-2.5 rounded-xl border ${iconClasses[glowColor] || iconClasses.sky} shadow-sm`}>
             <Icon className="w-5 h-5" />
           </div>
         )}
       </div>
 
-      <div className="mt-3 flex items-center justify-between text-xs">
-        <span className="text-slate-400 truncate">{subtitle}</span>
+      <div className="mt-3.5 flex items-center justify-between text-xs pt-2.5 border-t border-slate-100">
+        <span className="text-slate-500 truncate">{subtitle}</span>
         {trend && (
-          <span className={`inline-flex items-center px-1.5 py-0.5 rounded font-medium ${
-            trendPositive ? 'bg-emerald-500/10 text-emerald-400' : 'bg-rose-500/10 text-rose-400'
+          <span className={`inline-flex items-center px-2 py-0.5 rounded-md font-semibold text-[11px] ${
+            trendPositive ? 'bg-emerald-50 text-emerald-700 border border-emerald-200/70' : 'bg-rose-50 text-rose-700 border border-rose-200/70'
           }`}>
             {trend}
           </span>

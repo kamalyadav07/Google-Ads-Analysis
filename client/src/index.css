@@ -4,24 +4,25 @@
 
 @layer base {
   body {
-    @apply bg-[#0B0F19] text-slate-100 font-sans tracking-tight;
+    @apply bg-[#F8FAFC] text-slate-800 font-sans antialiased;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   }
 }
 
-/* Custom Scrollbars */
+/* Custom Scrollbars (Clean Light Theme) */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0B0F19;
+  background: #F8FAFC;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1F293D;
+  background: #CBD5E1;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #94A3B8;
 }
 
 /* Live Pulsating Indicator */
@@ -46,9 +47,13 @@
 
 /* Surface Utility Classes */
 .card-surface {
-  @apply bg-[#111827] border border-[#1F293D] rounded-xl shadow-sm transition-all duration-200 hover:border-slate-700/70;
+  @apply bg-white border border-slate-200/90 rounded-xl shadow-subtle transition-all duration-200 hover:border-slate-300;
 }
 
 .metric-badge {
-  @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium;
+  @apply inline-flex items-center px-2 py-0.5 rounded-md text-xs font-medium;
+}
+
+.font-tabular {
+  font-feature-settings: 'tnum' 1;
 }

@@ -10,7 +10,7 @@ export default function ExecutiveKpis() {
     return (
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 animate-pulse">
         {[...Array(8)].map((_, i) => (
-          <div key={i} className="h-28 bg-slate-800/40 rounded-xl border border-slate-800"></div>
+          <div key={i} className="h-28 bg-slate-100 rounded-xl border border-slate-200/80"></div>
         ))}
       </div>
     );

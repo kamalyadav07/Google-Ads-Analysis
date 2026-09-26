@@ -26,22 +26,22 @@ export default function Header({ onOpenAiDrawer }) {
   };
 
   return (
-    <header className="bg-[#111827] border-b border-[#1F293D] px-6 py-4 sticky top-0 z-30">
+    <header className="bg-white border-b border-slate-200/90 shadow-[0_1px_2px_rgba(0,0,0,0.03)] px-6 py-3.5 sticky top-0 z-30 font-sans">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
         {/* Brand & Live Pulse */}
-        <div className="flex items-center gap-4">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-indigo-600 flex items-center justify-center shadow-lg shadow-sky-600/20">
+        <div className="flex items-center gap-3.5">
+          <div className="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center shadow-sm">
             <Radio className="w-5 h-5 text-white" />
           </div>
           <div>
             <div className="flex items-center gap-2.5">
-              <h1 className="text-lg font-bold tracking-tight text-white">Marketing & Conversion Intelligence</h1>
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping-slow"></span>
+              <h1 className="text-base font-bold tracking-tight text-slate-900">Marketing & Conversion Intelligence</h1>
+              <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping-slow"></span>
                 LIVE
               </span>
             </div>
-            <p className="text-xs text-slate-400">
+            <p className="text-xs text-slate-500">
               Cross-funnel attribution: Google Ads ──► Landing Page Telemetry ──► Bitrix24 CRM
             </p>
           </div>
@@ -52,9 +52,9 @@ export default function Header({ onOpenAiDrawer }) {
           {/* AI Analyst Trigger */}
           <button
             onClick={onOpenAiDrawer}
-            className="flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-sky-500/10 to-indigo-500/10 text-sky-400 border border-sky-500/30 text-xs font-semibold hover:border-sky-400 transition-all shadow-sm"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800 transition-all shadow-sm"
           >
-            <Sparkles className="w-3.5 h-3.5 text-sky-400" />
+            <Sparkles className="w-3.5 h-3.5 text-blue-300" />
             AI Analyst
           </button>
 
@@ -62,25 +62,25 @@ export default function Header({ onOpenAiDrawer }) {
           <button
             onClick={handleSimulateLead}
             disabled={isSimulating}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 border border-slate-700 text-xs font-medium hover:bg-slate-700 transition"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white text-slate-700 border border-slate-200 text-xs font-medium hover:bg-slate-50 shadow-sm transition"
             title="Fire a synthetic Bitrix24 lead to verify live pipeline updates"
           >
-            <Zap className="w-3.5 h-3.5 text-amber-400" />
+            <Zap className="w-3.5 h-3.5 text-amber-500" />
             {isSimulating ? 'Simulating...' : 'Simulate Lead'}
           </button>
 
           {/* Date Range Selector */}
-          <div className="flex items-center gap-1.5 bg-[#0B0F19] border border-[#1F293D] rounded-lg px-2.5 py-1 text-xs text-slate-300">
+          <div className="flex items-center gap-1.5 bg-white border border-slate-200 rounded-lg px-2.5 py-1 text-xs text-slate-700 shadow-sm">
             <Calendar className="w-3.5 h-3.5 text-slate-400" />
             <select
               value={dateRange}
               onChange={(e) => setDateRange(e.target.value)}
-              className="bg-transparent border-none text-slate-200 focus:outline-none cursor-pointer pr-1"
+              className="bg-transparent border-none text-slate-700 font-medium focus:outline-none cursor-pointer pr-1"
             >
-              <option value="today" className="bg-slate-900 text-slate-100">Today</option>
-              <option value="7d" className="bg-slate-900 text-slate-100">Last 7 Days</option>
-              <option value="14d" className="bg-slate-900 text-slate-100">Last 14 Days</option>
-              <option value="30d" className="bg-slate-900 text-slate-100">Last 30 Days</option>
+              <option value="today">Today</option>
+              <option value="7d">Last 7 Days</option>
+              <option value="14d">Last 14 Days</option>
+              <option value="30d">Last 30 Days</option>
             </select>
           </div>
 
@@ -88,10 +88,10 @@ export default function Header({ onOpenAiDrawer }) {
           <button
             onClick={refreshData}
             disabled={isLoading}
-            className="p-1.5 rounded-lg bg-[#0B0F19] border border-[#1F293D] text-slate-400 hover:text-white transition"
+            className="p-1.5 rounded-lg bg-white border border-slate-200 text-slate-500 hover:text-slate-800 hover:bg-slate-50 shadow-sm transition"
             title="Refresh Data"
           >
-            <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin text-sky-400' : ''}`} />
+            <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin text-blue-600' : ''}`} />
           </button>
         </div>
       </div>
