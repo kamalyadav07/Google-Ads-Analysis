@@ -16,7 +16,7 @@ export default function TechHealthRadar() {
   const lcpColor = summary.avgLcpMs <= 2500 ? 'text-emerald-700' : (summary.avgLcpMs <= 4000 ? 'text-amber-700' : 'text-rose-700');
 
   return (
-    <div className="card-surface p-6 bg-white border border-slate-200/90 shadow-subtle font-sans">
+    <div className="card-surface p-6 bg-white border border-slate-200/90 font-sans">
       <div className="flex items-center justify-between pb-4 border-b border-slate-200/90">
         <div>
           <div className="flex items-center gap-2">

@@ -17,7 +17,7 @@ export default function CrmSalesFunnel() {
   ];
 
   return (
-    <div className="card-surface p-6 bg-white border border-slate-200/90 shadow-subtle font-sans">
+    <div className="card-surface p-6">
       <div className="flex items-center justify-between pb-4 border-b border-slate-200/90">
         <div>
           <div className="flex items-center gap-2">

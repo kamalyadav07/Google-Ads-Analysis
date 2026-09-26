@@ -21,7 +21,7 @@ export default function DiagnosticRootCauseCard() {
   };
 
   return (
-    <div className="card-surface p-6 bg-white border border-slate-200/90 shadow-subtle border-l-4 border-l-amber-500 font-sans">
+    <div className="card-surface p-6 bg-white border border-slate-200/90 border-l-4 border-l-amber-500 font-sans">
       {/* Header & Primary Verdict */}
       <div className="flex flex-col lg:flex-row lg:items-center justify-between pb-5 border-b border-slate-200/90 gap-4">
         <div>

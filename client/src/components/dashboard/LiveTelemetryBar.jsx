@@ -14,7 +14,7 @@ export default function LiveTelemetryBar() {
   const tabletPct = total > 0 ? Math.round((dev.tablet / total) * 100) : 7;
 
   return (
-    <div className="card-surface p-4 bg-white border border-slate-200/90 shadow-subtle font-sans">
+    <div className="card-surface p-4 bg-white border border-slate-200/90 font-sans">
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
         {/* Active Visitors & Device Ratio */}
         <div className="flex flex-wrap items-center gap-4">

@@ -40,7 +40,7 @@ export default function DeviceIntelligenceMatrix() {
   const convDisparity = (phoneConv > 0 && laptopConv > 0) ? (laptopConv / phoneConv).toFixed(1) : '3.2';
 
   return (
-    <div className="card-surface p-6 bg-white border border-slate-200/90 shadow-subtle font-sans">
+    <div className="card-surface p-6 bg-white border border-slate-200/90 font-sans">
       {/* Header with Filter Controls */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-5 border-b border-slate-200/90 gap-4">
         <div>

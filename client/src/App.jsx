@@ -141,7 +141,7 @@ export default function App() {
       </main>
 
       {/* 4. Footer */}
-      <footer className="border-t border-[#1F293D] bg-[#111827] py-4 px-6 text-xs text-slate-500 mt-auto">
+      <footer className="border-t border-slate-200 bg-white py-4 px-6 text-xs text-slate-500 mt-auto">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
           <span>Marketing & Landing Page Intelligence Platform &copy; 2026. Production Ready.</span>
           <div className="flex items-center gap-4">
@@ -149,12 +149,12 @@ export default function App() {
               href="https://github.com/kamalyadav07/Google-Ads-Analysis.git" 
               target="_blank" 
               rel="noreferrer"
-              className="text-slate-400 hover:text-white transition underline"
+              className="text-slate-600 hover:text-slate-900 transition underline"
             >
               GitHub Repository
             </a>
             <span>•</span>
-            <span className="font-mono text-[11px] text-sky-400">Filter: /{selectedService}</span>
+            <span className="font-mono text-[11px] text-blue-600 font-medium">Filter: /{selectedService}</span>
           </div>
         </div>
       </footer>
