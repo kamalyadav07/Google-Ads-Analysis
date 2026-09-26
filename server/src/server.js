@@ -1,3 +1,4 @@
+const fs = require('fs');
 const http = require('http');
 const path = require('path');
 const express = require('express');
@@ -28,7 +29,10 @@ app.use(cors({
 }));
 
 // 2. Serve Static Tracking SDK
-const trackerPath = path.join(__dirname, '../../tracker/src/tracker.js');
+const localTrackerPath = path.join(__dirname, '../public/tracker.js');
+const repoTrackerPath = path.join(__dirname, '../../tracker/src/tracker.js');
+const trackerPath = fs.existsSync(localTrackerPath) ? localTrackerPath : repoTrackerPath;
+
 app.get('/sdk/tracker.js', (req, res) => {
   res.setHeader('Content-Type', 'application/javascript');
   res.setHeader('Cache-Control', 'public, max-age=3600');
